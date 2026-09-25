@@ -30,6 +30,13 @@
             margin-top: 25px;
             font-size: 1.3em;
         }
+        h3 {
+            color: #4a5568; font-size: 1.1rem; margin: 20px 0 8px; font-weight: 600;
+        }
+        code {
+            background: #edf2f7; padding: 2px 7px; border-radius: 4px;
+            font-family: Consolas, Monaco, monospace; font-size: 0.9em; color: #2b6cb0;
+        }
         .info-box {
             background-color: #e8f4fd;
             padding: 15px;
@@ -65,43 +72,96 @@
             <strong>Titolare del Trattamento:</strong> Vacca Marcello, con residenza a Rimini (RN), Italia.<br>
             <strong>Email:</strong> <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>
         </div>
-        <p class="last-update">Ultimo aggiornamento: 17 Aprile 2026</p>
+        <p class="last-update">Ultimo aggiornamento: 25 Settembre 2026</p>
     </header>
 
     <main>
         <p>La presente Informativa sul Trattamento dei Dati Personali (Privacy Policy) descrive come <strong>QRArchive</strong> (l'"App"), in qualità di Titolare del trattamento, raccoglie, utilizza e protegge i dati personali degli utenti ai sensi del Regolamento UE 2016/679 (GDPR) e della normativa italiana vigente.</p>
 
-        <p>L'App serve a scansionare QR code e scontrini, conservare i relativi dati (indirizzi, immagini) localmente sul dispositivo, creare QR code personalizzati e offrire backup opzionale su Google Drive. Nessun dato esce dal dispositivo salvo per il backup volontario su Google Drive. L'App è rivolta a utenti di età pari o superiore a 16 anni.</p>
+        <p>QRArchive serve a scansionare codici QR e codici a barre, ad archiviare le foto di scontrini e ricevute, a generare codici QR personalizzati e a conservare note testuali e memo vocali. Tutti i contenuti creati dall'utente vengono salvati sul dispositivo. Non esiste alcun server gestito dallo sviluppatore. L'App è rivolta a utenti di età pari o superiore a 16 anni.</p>
 
         <section>
-            <h2>1. Dati Raccolti e Trattati</h2>
-            <p>Tutti i dati principali sono elaborati e conservati esclusivamente localmente sul dispositivo dell'utente.</p>
+            <h2>1. Dati Trattati Localmente sul Dispositivo</h2>
+            <p>I contenuti seguenti restano sul dispositivo dell'utente e non vengono trasmessi ad alcun destinatario, salvo il backup facoltativo descritto al punto 3.</p>
             <ul>
-                <li><strong>Dati forniti dall'utente:</strong> Immagini di QR code/scontrini, memo vocali (audio), note testuali, indirizzi estratti, metadati (date, categorie, importi), QR code generati. Salvati nel database locale.</li>
-                <li><strong>Permessi richiesti:</strong> Fotocamera (scansione), Microfono (registrazione memo vocali e dettatura), Archiviazione (salvataggio immagini/database).</li>
-                <li><strong>Base giuridica:</strong> Esecuzione di servizi contrattuali (art. 6(1)(b) GDPR). Nessun dato sensibile (art. 9 GDPR), analytics, profilazione o pubblicità.</li>
+                <li><strong>Immagini:</strong> foto di scontrini, ricevute e documenti acquisite con la fotocamera o importate dalla galleria.</li>
+                <li><strong>Contenuto dei codici scansionati:</strong> testo, indirizzi web, dati di reti Wi-Fi, contatti, eventi, codici prodotto.</li>
+                <li><strong>Metadati inseriti dall'utente:</strong> etichette, categorie, date, note.</li>
+                <li><strong>Note testuali</strong> e <strong>memo vocali</strong> registrati dall'utente, conservati come file audio nella memoria interna dell'App.</li>
+                <li><strong>Codici QR generati</strong> dall'utente.</li>
+            </ul>
+            <p><strong>Base giuridica:</strong> esecuzione del servizio richiesto dall'utente (art. 6(1)(b) GDPR). Non vengono trattate categorie particolari di dati (art. 9 GDPR) e non viene svolta alcuna attività di profilazione o di pubblicità.</p>
+        </section>
+
+        <section>
+            <h2>2. Permessi Richiesti e Loro Finalità</h2>
+            <ul>
+                <li><strong>Fotocamera:</strong> necessaria per leggere i codici dal vivo e per fotografare gli scontrini. Le immagini non vengono trasmesse per l'elaborazione: il riconoscimento dei codici avviene interamente sul dispositivo.</li>
+                <li><strong>Microfono:</strong> usato per due funzioni distinte. La registrazione di memo vocali, che restano come file audio sul dispositivo. E la dettatura di note, che utilizza il servizio di riconoscimento vocale di sistema di Android: a seconda del modello di dispositivo e delle impostazioni scelte dall'utente, tale servizio può elaborare l'audio sui server di Google. Questo trattamento è governato dall'informativa sulla privacy di Google e non dallo sviluppatore dell'App.</li>
+                <li><strong>Accesso ai file:</strong> per salvare e rileggere immagini e archivio nella memoria dell'applicazione.</li>
+                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive e per l'invio delle segnalazioni di errore descritte al punto 4.</li>
             </ul>
         </section>
 
         <section>
-            <h2>2. Backup su Google Drive (Opzionale)</h2>
-            <p>Su attivazione manuale, l'App carica una copia crittografata del database locale (inclusi scontrini/indirizzi) nella cartella personale Google Drive (scope limitato: <code>drive.file</code>). Google autentica via OAuth (dati usati: solo token temporaneo per accesso). L'App non legge altri file né condivide dati con terzi.</p>
-            <p><strong>Base giuridica:</strong> Consenso (art. 6(1)(a) GDPR). Trasferimenti extra-UE (Google) protetti da clausole contrattuali standard UE e adequacy decisions.</p>
+            <h2>3. Backup Facoltativo su Google Drive</h2>
+            <p>La funzione di backup è <strong>disattivata per impostazione predefinita</strong> e richiede un'azione esplicita dell'utente. L'App è pienamente utilizzabile senza collegare alcun account Google.</p>
+
+            <h3>Dati dell'account Google a cui l'App accede</h3>
+            <ul>
+                <li><strong>Indirizzo email e nome del profilo:</strong> per identificare l'account su cui effettuare il salvataggio.</li>
+                <li><strong>File creati dall'App nel Drive dell'utente:</strong> tramite l'ambito di autorizzazione <code>drive.file</code>.</li>
+            </ul>
+
+            <p>L'ambito <code>drive.file</code> è il più ristretto messo a disposizione da Google per Drive e consente all'App di accedere <strong>esclusivamente ai file che l'App stessa ha creato</strong>. QRArchive non può in alcun modo leggere, modificare, scaricare o eliminare altri documenti, foto o cartelle presenti nel Drive dell'utente, né ottenerne l'elenco.</p>
+
+            <p>Il file di backup contiene il database dell'App e le immagini archiviate. Viene caricato direttamente dal dispositivo dell'utente al suo Google Drive, senza transitare da alcun sistema intermedio.</p>
+
+            <div class="info-box">
+                <strong>Conformità alle Norme relative ai dati utente dei servizi API di Google (Limited Use)</strong><br><br>
+                L'uso e il trasferimento da parte di QRArchive delle informazioni ricevute dalle API di Google sono conformi alle
+                <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Norme relative ai dati utente dei servizi API di Google</a>,
+                inclusi i requisiti di Uso Limitato (<em>Limited Use</em>).<br><br>
+                In particolare, i dati ottenuti tramite le API di Google:
+                <ul style="margin-top:10px">
+                    <li>sono utilizzati unicamente per fornire e migliorare la funzione di backup e ripristino richiesta dall'utente;</li>
+                    <li>non sono trasferiti a terze parti, salvo quanto strettamente necessario per erogare tale funzione, per adempiere a obblighi di legge o in caso di cessione aziendale previa informativa agli utenti;</li>
+                    <li>non sono utilizzati per finalità pubblicitarie, di profilazione o di analisi di mercato;</li>
+                    <li>non sono venduti ad alcun soggetto;</li>
+                    <li>non sono letti da persone fisiche, salvo previo consenso esplicito dell'utente, per ragioni di sicurezza o per adempiere a obblighi di legge.</li>
+                </ul>
+            </div>
+
+            <p><strong>Base giuridica:</strong> consenso dell'interessato (art. 6(1)(a) GDPR). Il trasferimento verso Google, in quanto fornitore extra-UE, è disciplinato dalle garanzie previste dal Capo V del GDPR.</p>
+
+            <p><strong>Revoca:</strong> l'utente può revocare in qualsiasi momento l'autorizzazione dalla pagina <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>, oppure disattivando il backup dalle impostazioni dell'App. Il file di backup già presente resta nel Drive dell'utente e può essere eliminato direttamente da lì.</p>
         </section>
 
         <section>
-            <h2>3. Sicurezza e Conservazione</h2>
-            <p>Dati locali protetti da crittografia database e accesso device-only. Backup usa HTTPS/TLS. Conservazione: fino a disinstallazione (locali) o cancellazione manuale (Drive). Nessun server remoto.</p>
+            <h2>4. Segnalazioni di Errore (Firebase Crashlytics)</h2>
+            <p>L'App integra <strong>Google Firebase Crashlytics</strong>, un servizio che raccoglie informazioni tecniche quando l'applicazione si chiude in modo anomalo, al fine di individuare e correggere i malfunzionamenti.</p>
+            <p>In caso di arresto anomalo vengono trasmessi a Google: la traccia tecnica dell'errore, il modello del dispositivo, la versione del sistema operativo, la versione dell'App, lo stato della memoria e un identificativo di installazione generato casualmente.</p>
+            <p>Questi dati <strong>non contengono</strong> le immagini, le note, i memo vocali o i codici scansionati dall'utente, e non permettono di risalire alla sua identità.</p>
+            <p><strong>Base giuridica:</strong> legittimo interesse del Titolare a garantire la stabilità e la sicurezza dell'applicazione (art. 6(1)(f) GDPR). <strong>Responsabile del trattamento:</strong> Google Ireland Limited.</p>
         </section>
 
         <section>
-            <h2>4. Diritti dell'Interessato (Art. 15-22 GDPR)</h2>
-            <p>Hai diritto a: accesso, rettifica, cancellazione ("diritto all'oblio"), limitazione, portabilità, opposizione. Esercitali gratuitamente via <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a> entro 1 mese. Per minori &lt;16 anni, consenso genitoriale (art. 8 GDPR). Reclami: <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante Privacy</a>.</p>
+            <h2>5. Sicurezza e Conservazione</h2>
+            <p>I dati salvati sul dispositivo sono protetti dall'isolamento applicativo (<em>sandbox</em>) previsto dal sistema operativo Android, che ne impedisce la lettura da parte di altre applicazioni. Se l'utente ha attivato la cifratura del dispositivo, essa si applica anche a questi dati.</p>
+            <p>Le comunicazioni verso Google Drive e Firebase avvengono tramite connessione cifrata HTTPS/TLS.</p>
+            <p><strong>Si informa espressamente che il file di backup caricato su Google Drive non è protetto da una cifratura aggiuntiva applicata dall'App</strong>, ed è tutelato dalle misure di sicurezza e dal controllo di accesso dell'account Google dell'utente.</p>
+            <p><strong>Conservazione:</strong> i dati locali permangono fino alla loro cancellazione da parte dell'utente o alla disinstallazione dell'App. Il file di backup permane nel Drive dell'utente fino a sua eliminazione manuale. I dati di Crashlytics sono conservati da Google secondo le tempistiche previste dal servizio, di norma 90 giorni.</p>
         </section>
 
         <section>
-            <h2>5. Modifiche e Contatti</h2>
-            <p>Eventuali aggiornamenti notificati in App al primo avvio; uso continuato implica accettazione. Contattaci: <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a></p>
+            <h2>6. Diritti dell'Interessato (Art. 15-22 GDPR)</h2>
+            <p>L'utente ha diritto di accesso, rettifica, cancellazione ("diritto all'oblio"), limitazione, portabilità e opposizione. Poiché i dati risiedono sul dispositivo, tali diritti sono esercitabili direttamente dall'utente eliminando i contenuti dall'App, disinstallandola o rimuovendo il file di backup dal proprio Drive.</p>
+            <p>Per ogni ulteriore richiesta è possibile scrivere gratuitamente a <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>; sarà fornito riscontro entro un mese. Per i minori di 16 anni è richiesto il consenso di chi esercita la responsabilità genitoriale (art. 8 GDPR). È sempre possibile proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
+        </section>
+
+        <section>
+            <h2>7. Modifiche e Contatti</h2>
+            <p>Eventuali aggiornamenti della presente informativa saranno pubblicati su questa pagina con indicazione della nuova data di revisione e notificati nell'App al primo avvio successivo. Per qualsiasi chiarimento: <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a></p>
         </section>
     </main>
 </div>

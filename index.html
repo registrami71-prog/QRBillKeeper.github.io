@@ -64,6 +64,26 @@
         .play-badge:hover { transform: scale(1.05); }
         
         .dev-info { margin-top: 30px; opacity: 0.8; font-size: 0.95rem; }
+
+        /* Sezioni descrittive */
+        .info-section {
+            background: white; padding: 40px 35px; border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05); margin: 40px 0;
+            border-left: 5px solid #667eea;
+        }
+        .info-section h2 { color: #2d3748; font-size: 1.8rem; margin-bottom: 18px; }
+        .info-section h3 { color: #4a5568; font-size: 1.15rem; margin: 22px 0 8px; }
+        .info-section p { margin-bottom: 14px; color: #4a5568; }
+        .info-section ul { margin: 0 0 14px 22px; color: #4a5568; }
+        .info-section li { margin-bottom: 8px; }
+        .scope-box {
+            background: #f7fafc; border: 1px solid #cbd5e0; border-radius: 10px;
+            padding: 20px; margin-top: 18px; font-size: 0.97rem;
+        }
+        .scope-box code {
+            background: #edf2f7; padding: 2px 7px; border-radius: 4px;
+            font-family: Consolas, Monaco, monospace; font-size: 0.9rem; color: #2b6cb0;
+        }
     </style>
 </head>
 <body>
@@ -73,9 +93,9 @@
             <h1>🧾 QRArchive</h1>
             <p class="slogan">Scansiona, Organizza e Proteggi i tuoi Scontrini</p>
             <p class="hero-desc">
-                L'App Android gratuita per digitalizzare QR code e scontrini. 
-                Dati salvati in locale sul tuo dispositivo, con backup crittografato opzionale su Google Drive. 
-                Massima privacy, funzionamento offline.
+                L'App Android gratuita per scansionare QR code e codici a barre e per archiviare
+                le foto dei tuoi scontrini. Tutti i dati restano sul tuo dispositivo, con backup
+                opzionale sul tuo Google Drive personale. Nessun account richiesto, funziona offline.
             </p>
         </header>
 
@@ -94,13 +114,77 @@
             <div class="feature">
                 <span class="emoji">☁️</span>
                 <h3>Backup Drive</h3>
-                <p>Salvataggio sicuro e crittografato sul tuo Google Drive personale.</p>
+                <p>Copia dell'archivio sul tuo Google Drive personale, quando lo decidi tu.</p>
             </div>
             <div class="feature">
                 <span class="emoji">⚡</span>
                 <h3>100% Offline</h3>
                 <p>Funziona ovunque, anche senza connessione internet.</p>
             </div>
+        </section>
+
+        <!-- Scopo dell'applicazione -->
+        <section class="info-section">
+            <h2>Che cos'è QRArchive e a cosa serve</h2>
+            <p>
+                QRArchive è un'applicazione Android gratuita che svolge due funzioni principali:
+                leggere codici QR e codici a barre tramite la fotocamera, e conservare in modo
+                ordinato le foto dei documenti di acquisto (scontrini, ricevute, garanzie).
+            </p>
+            <h3>Cosa puoi fare con l'app</h3>
+            <ul>
+                <li><strong>Scansionare</strong> QR code e codici a barre dal vivo con la fotocamera o da immagini già presenti in galleria.</li>
+                <li><strong>Archiviare</strong> le foto degli scontrini in cartelle create da te, anche su più pagine per lo stesso documento.</li>
+                <li><strong>Ritrovare</strong> un documento cercandolo per nome, categoria o data.</li>
+                <li><strong>Generare</strong> QR code personalizzati contenenti testo, indirizzi web, reti Wi-Fi, contatti o eventi.</li>
+                <li><strong>Annotare</strong> promemoria testuali o dettati a voce.</li>
+                <li><strong>Salvare una copia</strong> dell'intero archivio sul proprio Google Drive, per non perdere i documenti cambiando telefono.</li>
+            </ul>
+            <p>
+                L'app non richiede la creazione di alcun account e funziona senza connessione a internet.
+                Non esiste alcun server gestito dallo sviluppatore: i dati non vengono raccolti né
+                centralizzati da nessuna parte.
+            </p>
+        </section>
+
+        <!-- Uso dei dati Google -->
+        <section class="info-section">
+            <h2>Come QRArchive usa il tuo account Google</h2>
+            <p>
+                L'accesso a Google è <strong>facoltativo</strong>. L'applicazione è completamente
+                utilizzabile senza collegare alcun account: serve esclusivamente a chi vuole attivare
+                la funzione di backup e ripristino dell'archivio.
+            </p>
+            <h3>A cosa serve il permesso richiesto</h3>
+            <p>
+                Quando attivi il backup, QRArchive crea un file di archivio contenente il tuo database
+                e le foto degli scontrini, e lo carica nel <strong>tuo</strong> Google Drive. Quando
+                reinstalli l'app o cambi dispositivo, lo stesso file viene riscaricato per ripristinare
+                l'archivio. Il trasferimento avviene direttamente tra il tuo telefono e Google.
+            </p>
+            <div class="scope-box">
+                <p><strong>Ambito di autorizzazione richiesto:</strong> <code>drive.file</code></p>
+                <p style="margin-bottom:0">
+                    È l'ambito più ristretto messo a disposizione da Google per Drive: consente all'app
+                    di vedere e gestire <em>soltanto i file che l'app stessa ha creato</em>. QRArchive
+                    non può leggere, modificare o eliminare nessun altro documento, foto o cartella
+                    presente nel tuo Drive. Oltre a questo, riceve il tuo indirizzo email e il nome
+                    del profilo, necessari per identificare l'account su cui salvare il backup.
+                </p>
+            </div>
+            <h3>Cosa non facciamo</h3>
+            <ul>
+                <li>I dati ottenuti da Google non vengono trasferiti a terzi.</li>
+                <li>Non vengono usati per pubblicità, profilazione o analisi di mercato.</li>
+                <li>Non vengono letti da persone: nessun operatore umano ha accesso ai tuoi file.</li>
+                <li>Non vengono venduti, in nessuna circostanza.</li>
+            </ul>
+            <p style="margin-bottom:0">
+                Puoi revocare l'autorizzazione in qualunque momento da
+                <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>,
+                oppure disattivando il backup dalle impostazioni dell'app. I dettagli completi sono
+                descritti nella <a href="privacy-policy.html">Privacy Policy</a>.
+            </p>
         </section>
 
         <!-- CTA Download (Link placeholder Play Store) -->
