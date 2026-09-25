@@ -78,11 +78,11 @@
     <main>
         <p>La presente Informativa sul Trattamento dei Dati Personali (Privacy Policy) descrive come <strong>QRArchive</strong> (l'"App"), in qualità di Titolare del trattamento, raccoglie, utilizza e protegge i dati personali degli utenti ai sensi del Regolamento UE 2016/679 (GDPR) e della normativa italiana vigente.</p>
 
-        <p>QRArchive serve a scansionare codici QR e codici a barre, ad archiviare le foto di scontrini e ricevute, a generare codici QR personalizzati e a conservare note testuali e memo vocali. Tutti i contenuti creati dall'utente vengono salvati sul dispositivo. Non esiste alcun server gestito dallo sviluppatore. L'App è rivolta a utenti di età pari o superiore a 16 anni.</p>
+        <p>QRArchive serve a scansionare codici QR e codici a barre, a mostrare le informazioni sui prodotti a partire dal loro codice a barre, ad archiviare le foto di scontrini e ricevute, a generare codici QR personalizzati e a conservare note testuali e memo vocali. Tutti i contenuti creati dall'utente vengono salvati sul dispositivo. Non esiste alcun server gestito dallo sviluppatore. L'App è rivolta a utenti di età pari o superiore a 16 anni.</p>
 
         <section>
             <h2>1. Dati Trattati Localmente sul Dispositivo</h2>
-            <p>I contenuti seguenti restano sul dispositivo dell'utente e non vengono trasmessi ad alcun destinatario, salvo il backup facoltativo descritto al punto 3.</p>
+            <p>I contenuti seguenti restano sul dispositivo dell'utente e non vengono trasmessi ad alcun destinatario, salvo il backup facoltativo descritto al punto 3 e il codice a barre dei prodotti descritto al punto 5.</p>
             <ul>
                 <li><strong>Immagini:</strong> foto di scontrini, ricevute e documenti acquisite con la fotocamera o importate dalla galleria.</li>
                 <li><strong>Contenuto dei codici scansionati:</strong> testo, indirizzi web, dati di reti Wi-Fi, contatti, eventi, codici prodotto.</li>
@@ -99,7 +99,7 @@
                 <li><strong>Fotocamera:</strong> necessaria per leggere i codici dal vivo e per fotografare gli scontrini. Le immagini non vengono trasmesse per l'elaborazione: il riconoscimento dei codici avviene interamente sul dispositivo.</li>
                 <li><strong>Microfono:</strong> usato per due funzioni distinte. La registrazione di memo vocali, che restano come file audio sul dispositivo. E la dettatura di note, che utilizza il servizio di riconoscimento vocale di sistema di Android: a seconda del modello di dispositivo e delle impostazioni scelte dall'utente, tale servizio può elaborare l'audio sui server di Google. Questo trattamento è governato dall'informativa sulla privacy di Google e non dallo sviluppatore dell'App.</li>
                 <li><strong>Accesso ai file:</strong> per salvare e rileggere immagini e archivio nella memoria dell'applicazione.</li>
-                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive e per l'invio delle segnalazioni di errore descritte al punto 4.</li>
+                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive (punto 3), per l'invio delle segnalazioni di errore (punto 4), per la ricerca delle informazioni sui prodotti (punto 5) e per verificare, all'avvio, che la versione installata sia ancora supportata. Quest'ultima verifica legge un file di configurazione pubblico da Google Firebase e non invia alcun dato personale oltre all'indirizzo IP del dispositivo.</li>
             </ul>
         </section>
 
@@ -146,21 +146,31 @@
         </section>
 
         <section>
-            <h2>5. Sicurezza e Conservazione</h2>
+            <h2>5. Informazioni sui Prodotti (Open Food Facts)</h2>
+            <p>Quando l'utente inquadra il codice a barre di un prodotto commerciale (formati EAN e UPC), l'App interroga <strong>automaticamente</strong> le banche dati pubbliche e collaborative <strong>Open Food Facts</strong> e <strong>Open Products Facts</strong>, per mostrare nome, marca, foto, ingredienti, allergeni, Nutri-Score, grado di trasformazione NOVA e valori nutrizionali del prodotto.</p>
+            <p>A tal fine vengono inviati ai server di Open Food Facts esclusivamente il <strong>codice a barre del prodotto</strong> e i dati tecnici inevitabili di qualunque connessione internet, ovvero l'indirizzo IP del dispositivo e il nome dell'App. La foto del prodotto, quando disponibile, viene scaricata direttamente dagli stessi server.</p>
+            <p><strong>Non vengono inviati</strong> il contenuto dei codici QR, le immagini, gli scontrini, le note, i memo vocali, né alcun dato dell'account Google o altro identificativo personale dell'utente. La ricerca non avviene per i codici QR, ma solo per i codici a barre di prodotti.</p>
+            <p>In assenza di connessione la ricerca non va a buon fine e il resto dell'App continua a funzionare normalmente.</p>
+            <p><strong>Destinatario:</strong> Open Food Facts, associazione senza scopo di lucro con sede in Francia, che tratta i dati secondo la propria <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">informativa sulla privacy</a>. Le informazioni sui prodotti sono distribuite con licenza Open Database License (ODbL) e sono mostrate nell'App con indicazione della fonte.</p>
+            <p><strong>Base giuridica:</strong> esecuzione del servizio richiesto dall'utente (art. 6(1)(b) GDPR).</p>
+        </section>
+
+        <section>
+            <h2>6. Sicurezza e Conservazione</h2>
             <p>I dati salvati sul dispositivo sono protetti dall'isolamento applicativo (<em>sandbox</em>) previsto dal sistema operativo Android, che ne impedisce la lettura da parte di altre applicazioni. Se l'utente ha attivato la cifratura del dispositivo, essa si applica anche a questi dati.</p>
-            <p>Le comunicazioni verso Google Drive e Firebase avvengono tramite connessione cifrata HTTPS/TLS.</p>
+            <p>Le comunicazioni verso Google Drive, Firebase e Open Food Facts avvengono tramite connessione cifrata HTTPS/TLS.</p>
             <p><strong>Si informa espressamente che il file di backup caricato su Google Drive non è protetto da una cifratura aggiuntiva applicata dall'App</strong>, ed è tutelato dalle misure di sicurezza e dal controllo di accesso dell'account Google dell'utente.</p>
             <p><strong>Conservazione:</strong> i dati locali permangono fino alla loro cancellazione da parte dell'utente o alla disinstallazione dell'App. Il file di backup permane nel Drive dell'utente fino a sua eliminazione manuale. I dati di Crashlytics sono conservati da Google secondo le tempistiche previste dal servizio, di norma 90 giorni.</p>
         </section>
 
         <section>
-            <h2>6. Diritti dell'Interessato (Art. 15-22 GDPR)</h2>
+            <h2>7. Diritti dell'Interessato (Art. 15-22 GDPR)</h2>
             <p>L'utente ha diritto di accesso, rettifica, cancellazione ("diritto all'oblio"), limitazione, portabilità e opposizione. Poiché i dati risiedono sul dispositivo, tali diritti sono esercitabili direttamente dall'utente eliminando i contenuti dall'App, disinstallandola o rimuovendo il file di backup dal proprio Drive.</p>
             <p>Per ogni ulteriore richiesta è possibile scrivere gratuitamente a <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>; sarà fornito riscontro entro un mese. Per i minori di 16 anni è richiesto il consenso di chi esercita la responsabilità genitoriale (art. 8 GDPR). È sempre possibile proporre reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a>.</p>
         </section>
 
         <section>
-            <h2>7. Modifiche e Contatti</h2>
+            <h2>8. Modifiche e Contatti</h2>
             <p>Eventuali aggiornamenti della presente informativa saranno pubblicati su questa pagina con indicazione della nuova data di revisione e notificati nell'App al primo avvio successivo. Per qualsiasi chiarimento: <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a></p>
         </section>
     </main>
