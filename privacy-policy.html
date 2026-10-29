@@ -72,7 +72,7 @@
             <strong>Titolare del Trattamento:</strong> Vacca Marcello, con residenza a Rimini (RN), Italia.<br>
             <strong>Email:</strong> <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>
         </div>
-        <p class="last-update">Ultimo aggiornamento: 25 Settembre 2026</p>
+        <p class="last-update">Ultimo aggiornamento: 29 Ottobre 2026</p>
     </header>
 
     <main>
@@ -89,8 +89,10 @@
                 <li><strong>Metadati inseriti dall'utente:</strong> etichette, categorie, date, note.</li>
                 <li><strong>Note testuali</strong> e <strong>memo vocali</strong> registrati dall'utente, conservati come file audio nella memoria interna dell'App.</li>
                 <li><strong>Codici QR generati</strong> dall'utente.</li>
+                <li><strong>Schede dei prodotti scansionati:</strong> le informazioni ricevute dalle banche dati del punto 5 e una piccola immagine del prodotto, salvate per poterle consultare anche senza connessione. Vengono cancellate insieme alla scansione a cui si riferiscono.</li>
+                <li><strong>Profilo alimentare (facoltativo):</strong> allergie e intolleranze, dieta vegetariana o vegana, preferenza per prodotti senza olio di palma e ingredienti da evitare, indicati dall'utente per ricevere un avviso sulla scheda dei prodotti. Queste informazioni possono riguardare la salute: restano <strong>esclusivamente sul dispositivo</strong>, il confronto con i prodotti avviene sul dispositivo, non sono incluse nel backup su Google Drive e non sono mai trasmesse allo sviluppatore né a terzi. Lo sviluppatore non ha alcun accesso a questi dati.</li>
             </ul>
-            <p><strong>Base giuridica:</strong> esecuzione del servizio richiesto dall'utente (art. 6(1)(b) GDPR). Non vengono trattate categorie particolari di dati (art. 9 GDPR) e non viene svolta alcuna attività di profilazione o di pubblicità.</p>
+            <p><strong>Base giuridica:</strong> esecuzione del servizio richiesto dall'utente (art. 6(1)(b) GDPR). Lo sviluppatore non riceve né tratta categorie particolari di dati (art. 9 GDPR): il profilo alimentare facoltativo resta nella sola disponibilità dell'utente, sul suo dispositivo. Non viene svolta alcuna attività di profilazione o di pubblicità.</p>
         </section>
 
         <section>
@@ -115,7 +117,7 @@
 
             <p>L'ambito <code>drive.file</code> è il più ristretto messo a disposizione da Google per Drive e consente all'App di accedere <strong>esclusivamente ai file che l'App stessa ha creato</strong>. QRArchive non può in alcun modo leggere, modificare, scaricare o eliminare altri documenti, foto o cartelle presenti nel Drive dell'utente, né ottenerne l'elenco.</p>
 
-            <p>Il file di backup contiene il database dell'App e le immagini archiviate. Viene caricato direttamente dal dispositivo dell'utente al suo Google Drive, senza transitare da alcun sistema intermedio.</p>
+            <p>Il file di backup contiene il database dell'App (comprese le schede dei prodotti scansionati, ma non il profilo alimentare) e le immagini archiviate. Viene caricato direttamente dal dispositivo dell'utente al suo Google Drive, senza transitare da alcun sistema intermedio.</p>
 
             <div class="info-box">
                 <strong>Conformità alle Norme relative ai dati utente dei servizi API di Google (Limited Use)</strong><br><br>
@@ -146,19 +148,27 @@
         </section>
 
         <section>
-            <h2>5. Informazioni sui Prodotti (Open Food Facts)</h2>
-            <p>Quando l'utente inquadra il codice a barre di un prodotto commerciale (formati EAN e UPC), l'App interroga <strong>automaticamente</strong> le banche dati pubbliche e collaborative <strong>Open Food Facts</strong> e <strong>Open Products Facts</strong>, per mostrare nome, marca, foto, ingredienti, allergeni, Nutri-Score, grado di trasformazione NOVA e valori nutrizionali del prodotto.</p>
-            <p>A tal fine vengono inviati ai server di Open Food Facts esclusivamente il <strong>codice a barre del prodotto</strong> e i dati tecnici inevitabili di qualunque connessione internet, ovvero l'indirizzo IP del dispositivo e il nome dell'App. La foto del prodotto, quando disponibile, viene scaricata direttamente dagli stessi server.</p>
-            <p><strong>Non vengono inviati</strong> il contenuto dei codici QR, le immagini, gli scontrini, le note, i memo vocali, né alcun dato dell'account Google o altro identificativo personale dell'utente. La ricerca non avviene per i codici QR, ma solo per i codici a barre di prodotti.</p>
-            <p>In assenza di connessione la ricerca non va a buon fine e il resto dell'App continua a funzionare normalmente.</p>
-            <p><strong>Destinatario:</strong> Open Food Facts, associazione senza scopo di lucro con sede in Francia, che tratta i dati secondo la propria <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">informativa sulla privacy</a>. Le informazioni sui prodotti sono distribuite con licenza Open Database License (ODbL) e sono mostrate nell'App con indicazione della fonte.</p>
+            <h2>5. Informazioni sui Prodotti (Open Food Facts e Open Prices)</h2>
+            <p>Quando l'utente inquadra il codice a barre di un prodotto commerciale (formati EAN e UPC), l'App interroga <strong>automaticamente</strong> le banche dati pubbliche e collaborative indicate di seguito, per mostrare nome, marca, foto, ingredienti, allergeni, Nutri-Score, grado di trasformazione NOVA, Eco-Score, etichette e valori nutrizionali.</p>
+            <ul>
+                <li><strong>Open Food Facts</strong> (alimenti), <strong>Open Beauty Facts</strong> (cosmetici), <strong>Open Pet Food Facts</strong> (alimenti per animali) e <strong>Open Products Facts</strong> (altri prodotti), consultate in quest'ordine finché il prodotto non viene trovato; dagli stessi server l'App riceve anche i nomi tradotti e le brevi spiegazioni di additivi, etichette e origini.</li>
+                <li><strong>Open Prices</strong>, consultata <strong>solo se l'utente tocca</strong> il pulsante "Mostra prezzi segnalati" sulla scheda del prodotto, per mostrare i prezzi segnalati da altri utenti nella valuta del paese impostato sul dispositivo. L'App non invia prezzi e non mostra chi li ha segnalati.</li>
+            </ul>
+            <p>A tal fine vengono inviati esclusivamente il <strong>codice a barre del prodotto</strong> (e, per Open Prices, la valuta), insieme ai dati tecnici inevitabili di qualunque connessione internet, ovvero l'indirizzo IP del dispositivo e il nome dell'App. La foto del prodotto, quando disponibile, viene scaricata direttamente dagli stessi server.</p>
+            <p><strong>Non vengono inviati</strong> il contenuto dei codici QR, le immagini, gli scontrini, le note, i memo vocali, il profilo alimentare, né alcun dato dell'account Google o altro identificativo personale dell'utente. La ricerca non avviene per i codici QR, ma solo per i codici a barre di prodotti.</p>
+            <p>In assenza di connessione la ricerca non va a buon fine (le schede già salvate restano consultabili) e il resto dell'App continua a funzionare normalmente.</p>
+            <p><strong>Destinatario:</strong></p>
+            <ul>
+                <li><strong>Open Food Facts</strong>, associazione senza scopo di lucro con sede in Francia, che gestisce Open Food Facts, Open Beauty Facts, Open Pet Food Facts, Open Products Facts e Open Prices e tratta i dati secondo la propria <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">informativa sulla privacy</a>.</li>
+            </ul>
+            <p>Per le informazioni sui prodotti l'App si rivolge soltanto a Open Food Facts, con sede nell'Unione europea, e <strong>non utilizza servizi con sede fuori dall'UE</strong>. Le informazioni sui prodotti sono distribuite con licenza Open Database License (ODbL) e sono mostrate nell'App con indicazione della fonte.</p>
             <p><strong>Base giuridica:</strong> esecuzione del servizio richiesto dall'utente (art. 6(1)(b) GDPR).</p>
         </section>
 
         <section>
             <h2>6. Sicurezza e Conservazione</h2>
             <p>I dati salvati sul dispositivo sono protetti dall'isolamento applicativo (<em>sandbox</em>) previsto dal sistema operativo Android, che ne impedisce la lettura da parte di altre applicazioni. Se l'utente ha attivato la cifratura del dispositivo, essa si applica anche a questi dati.</p>
-            <p>Le comunicazioni verso Google Drive, Firebase e Open Food Facts avvengono tramite connessione cifrata HTTPS/TLS.</p>
+            <p>Le comunicazioni verso Google Drive, Firebase, Open Food Facts (e le banche dati collegate) e Open Prices avvengono tramite connessione cifrata HTTPS/TLS.</p>
             <p><strong>Si informa espressamente che il file di backup caricato su Google Drive non è protetto da una cifratura aggiuntiva applicata dall'App</strong>, ed è tutelato dalle misure di sicurezza e dal controllo di accesso dell'account Google dell'utente.</p>
             <p><strong>Conservazione:</strong> i dati locali permangono fino alla loro cancellazione da parte dell'utente o alla disinstallazione dell'App. Il file di backup permane nel Drive dell'utente fino a sua eliminazione manuale. I dati di Crashlytics sono conservati da Google secondo le tempistiche previste dal servizio, di norma 90 giorni.</p>
         </section>
