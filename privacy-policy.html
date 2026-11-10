@@ -72,7 +72,7 @@
             <strong>Titolare del Trattamento:</strong> Vacca Marcello, con residenza a Rimini (RN), Italia.<br>
             <strong>Email:</strong> <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>
         </div>
-        <p class="last-update">Ultimo aggiornamento: 29 Ottobre 2026</p>
+        <p class="last-update">Ultimo aggiornamento: 10 Novembre 2026</p>
     </header>
 
     <main>
@@ -101,7 +101,7 @@
                 <li><strong>Fotocamera:</strong> necessaria per leggere i codici dal vivo e per fotografare gli scontrini. Le immagini non vengono trasmesse per l'elaborazione: il riconoscimento dei codici avviene interamente sul dispositivo.</li>
                 <li><strong>Microfono:</strong> usato per due funzioni distinte. La registrazione di memo vocali, che restano come file audio sul dispositivo. E la dettatura di note, che utilizza il servizio di riconoscimento vocale di sistema di Android: a seconda del modello di dispositivo e delle impostazioni scelte dall'utente, tale servizio può elaborare l'audio sui server di Google. Questo trattamento è governato dall'informativa sulla privacy di Google e non dallo sviluppatore dell'App.</li>
                 <li><strong>Accesso ai file:</strong> per salvare e rileggere immagini e archivio nella memoria dell'applicazione.</li>
-                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive (punto 3), per l'invio delle segnalazioni di errore (punto 4), per la ricerca delle informazioni sui prodotti (punto 5) e per verificare, all'avvio, che la versione installata sia ancora supportata. Quest'ultima verifica legge un file di configurazione pubblico da Google Firebase e non invia alcun dato personale oltre all'indirizzo IP del dispositivo.</li>
+                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive (punto 3), per l'invio delle segnalazioni di errore (punto 4), per la ricerca delle informazioni sui prodotti (punto 5) e per verificare, all'avvio, che la versione installata sia ancora supportata. Quest'ultima verifica legge un file di configurazione pubblico da Google Firebase e non invia alcun dato personale oltre all'indirizzo IP del dispositivo. Inoltre, all'avvio, l'App chiede all'app Google Play Store installata sul dispositivo se è disponibile una versione più recente: questa verifica è svolta da Google Play secondo la propria informativa e l'App non vi aggiunge dati propri.</li>
             </ul>
         </section>
 
@@ -149,14 +149,16 @@
 
         <section>
             <h2>5. Informazioni sui Prodotti (Open Food Facts e Open Prices)</h2>
-            <p>Quando l'utente inquadra il codice a barre di un prodotto commerciale (formati EAN e UPC), l'App interroga <strong>automaticamente</strong> le banche dati pubbliche e collaborative indicate di seguito, per mostrare nome, marca, foto, ingredienti, allergeni, Nutri-Score, grado di trasformazione NOVA, Eco-Score, etichette e valori nutrizionali.</p>
+            <p>Quando l'utente inquadra il codice a barre di un prodotto commerciale (formati EAN e UPC, oppure codici GS1 come ITF-14, GS1-128 e GS1 DataMatrix, presenti su cartoni, imballi e confezioni di farmaci), l'App interroga <strong>automaticamente</strong> le banche dati pubbliche e collaborative indicate di seguito, per mostrare nome, marca, foto, ingredienti, allergeni, Nutri-Score, grado di trasformazione NOVA, Eco-Score, etichette e valori nutrizionali.</p>
             <ul>
                 <li><strong>Open Food Facts</strong> (alimenti), <strong>Open Beauty Facts</strong> (cosmetici), <strong>Open Pet Food Facts</strong> (alimenti per animali) e <strong>Open Products Facts</strong> (altri prodotti), consultate in quest'ordine finché il prodotto non viene trovato; dagli stessi server l'App riceve anche i nomi tradotti e le brevi spiegazioni di additivi, etichette e origini.</li>
                 <li><strong>Open Prices</strong>, consultata <strong>solo se l'utente tocca</strong> il pulsante "Mostra prezzi segnalati" sulla scheda del prodotto, per mostrare i prezzi segnalati da altri utenti nella valuta del paese impostato sul dispositivo. L'App non invia prezzi e non mostra chi li ha segnalati.</li>
             </ul>
             <p>A tal fine vengono inviati esclusivamente il <strong>codice a barre del prodotto</strong> (e, per Open Prices, la valuta), insieme ai dati tecnici inevitabili di qualunque connessione internet, ovvero l'indirizzo IP del dispositivo e il nome dell'App. La foto del prodotto, quando disponibile, viene scaricata direttamente dagli stessi server.</p>
+            <p>Per i codici GS1 viene inviato <strong>solo il codice del prodotto</strong> ricavato dal codice letto. Gli altri dati contenuti nel codice, come lotto, data di scadenza e numero di serie, vengono letti e mostrati soltanto sul dispositivo e <strong>non vengono trasmessi</strong>.</p>
             <p><strong>Non vengono inviati</strong> il contenuto dei codici QR, le immagini, gli scontrini, le note, i memo vocali, il profilo alimentare, né alcun dato dell'account Google o altro identificativo personale dell'utente. La ricerca non avviene per i codici QR, ma solo per i codici a barre di prodotti.</p>
             <p>In assenza di connessione la ricerca non va a buon fine (le schede già salvate restano consultabili) e il resto dell'App continua a funzionare normalmente.</p>
+            <p><strong>Ricerche sul web:</strong> i pulsanti "Cerca su Google", "Cerca su Amazon", "Cerca su eBay" e "Cerca in rete" aprono il browser del dispositivo con il codice o il testo scansionato, <strong>solo se l'utente li tocca</strong>. L'App non invia nulla in automatico a questi siti: da quel momento il trattamento è regolato dall'informativa sulla privacy del sito aperto.</p>
             <p><strong>Destinatario:</strong></p>
             <ul>
                 <li><strong>Open Food Facts</strong>, associazione senza scopo di lucro con sede in Francia, che gestisce Open Food Facts, Open Beauty Facts, Open Pet Food Facts, Open Products Facts e Open Prices e tratta i dati secondo la propria <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">informativa sulla privacy</a>.</li>
