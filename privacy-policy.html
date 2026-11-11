@@ -72,7 +72,7 @@
             <strong>Titolare del Trattamento:</strong> Vacca Marcello, con residenza a Rimini (RN), Italia.<br>
             <strong>Email:</strong> <a href="mailto:app.sempre.utili@gmail.com">app.sempre.utili@gmail.com</a>
         </div>
-        <p class="last-update">Ultimo aggiornamento: 10 Novembre 2026</p>
+        <p class="last-update">Ultimo aggiornamento: 11 Novembre 2026</p>
     </header>
 
     <main>
@@ -84,8 +84,9 @@
             <h2>1. Dati Trattati Localmente sul Dispositivo</h2>
             <p>I contenuti seguenti restano sul dispositivo dell'utente e non vengono trasmessi ad alcun destinatario, salvo il backup facoltativo descritto al punto 3 e il codice a barre dei prodotti descritto al punto 5.</p>
             <ul>
-                <li><strong>Immagini:</strong> foto di scontrini, ricevute e documenti acquisite con la fotocamera o importate dalla galleria.</li>
-                <li><strong>Contenuto dei codici scansionati:</strong> testo, indirizzi web, dati di reti Wi-Fi, contatti, eventi, codici prodotto.</li>
+                <li><strong>Immagini:</strong> foto di scontrini, ricevute e documenti acquisite con la fotocamera o importate dalla galleria, eventualmente ritagliate dall'utente (il ritaglio avviene sul dispositivo).</li>
+                <li><strong>Documenti PDF:</strong> i documenti che l'utente sceglie di salvare tra gli scontrini a partire da un codice QR (punto 5), insieme alla copia in immagini delle loro pagine.</li>
+                <li><strong>Contenuto dei codici scansionati:</strong> testo, indirizzi web, dati di reti Wi-Fi, contatti, eventi, codici prodotto, ed eventuali commenti aggiunti dall'utente ai codici in cronologia.</li>
                 <li><strong>Metadati inseriti dall'utente:</strong> etichette, categorie, date, note.</li>
                 <li><strong>Note testuali</strong> e <strong>memo vocali</strong> registrati dall'utente, conservati come file audio nella memoria interna dell'App.</li>
                 <li><strong>Codici QR generati</strong> dall'utente.</li>
@@ -101,7 +102,7 @@
                 <li><strong>Fotocamera:</strong> necessaria per leggere i codici dal vivo e per fotografare gli scontrini. Le immagini non vengono trasmesse per l'elaborazione: il riconoscimento dei codici avviene interamente sul dispositivo.</li>
                 <li><strong>Microfono:</strong> usato per due funzioni distinte. La registrazione di memo vocali, che restano come file audio sul dispositivo. E la dettatura di note, che utilizza il servizio di riconoscimento vocale di sistema di Android: a seconda del modello di dispositivo e delle impostazioni scelte dall'utente, tale servizio può elaborare l'audio sui server di Google. Questo trattamento è governato dall'informativa sulla privacy di Google e non dallo sviluppatore dell'App.</li>
                 <li><strong>Accesso ai file:</strong> per salvare e rileggere immagini e archivio nella memoria dell'applicazione.</li>
-                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive (punto 3), per l'invio delle segnalazioni di errore (punto 4), per la ricerca delle informazioni sui prodotti (punto 5) e per verificare, all'avvio, che la versione installata sia ancora supportata. Quest'ultima verifica legge un file di configurazione pubblico da Google Firebase e non invia alcun dato personale oltre all'indirizzo IP del dispositivo. Inoltre, all'avvio, l'App chiede all'app Google Play Store installata sul dispositivo se è disponibile una versione più recente: questa verifica è svolta da Google Play secondo la propria informativa e l'App non vi aggiunge dati propri.</li>
+                <li><strong>Rete:</strong> utilizzata soltanto per il backup facoltativo su Google Drive (punto 3), per l'invio delle segnalazioni di errore (punto 4), per la ricerca delle informazioni sui prodotti (punto 5), per scaricare, solo su richiesta dell'utente, un documento PDF indicato da un codice QR (punto 5) e per verificare, all'avvio, che la versione installata sia ancora supportata. Quest'ultima verifica legge un file di configurazione pubblico da Google Firebase e non invia alcun dato personale oltre all'indirizzo IP del dispositivo. Inoltre, all'avvio, l'App chiede all'app Google Play Store installata sul dispositivo se è disponibile una versione più recente: questa verifica è svolta da Google Play secondo la propria informativa e l'App non vi aggiunge dati propri.</li>
             </ul>
         </section>
 
@@ -117,7 +118,7 @@
 
             <p>L'ambito <code>drive.file</code> è il più ristretto messo a disposizione da Google per Drive e consente all'App di accedere <strong>esclusivamente ai file che l'App stessa ha creato</strong>. QRArchive non può in alcun modo leggere, modificare, scaricare o eliminare altri documenti, foto o cartelle presenti nel Drive dell'utente, né ottenerne l'elenco.</p>
 
-            <p>Il file di backup contiene il database dell'App (comprese le schede dei prodotti scansionati, ma non il profilo alimentare) e le immagini archiviate. Viene caricato direttamente dal dispositivo dell'utente al suo Google Drive, senza transitare da alcun sistema intermedio.</p>
+            <p>Il file di backup contiene il database dell'App (comprese le schede dei prodotti scansionati e i commenti ai codici, ma non il profilo alimentare), le immagini, i documenti PDF e i memo vocali archiviati. Viene caricato direttamente dal dispositivo dell'utente al suo Google Drive, senza transitare da alcun sistema intermedio.</p>
 
             <div class="info-box">
                 <strong>Conformità alle Norme relative ai dati utente dei servizi API di Google (Limited Use)</strong><br><br>
@@ -159,6 +160,7 @@
             <p><strong>Non vengono inviati</strong> il contenuto dei codici QR, le immagini, gli scontrini, le note, i memo vocali, il profilo alimentare, né alcun dato dell'account Google o altro identificativo personale dell'utente. La ricerca non avviene per i codici QR, ma solo per i codici a barre di prodotti.</p>
             <p>In assenza di connessione la ricerca non va a buon fine (le schede già salvate restano consultabili) e il resto dell'App continua a funzionare normalmente.</p>
             <p><strong>Ricerche sul web:</strong> i pulsanti "Cerca su Google", "Cerca su Amazon", "Cerca su eBay" e "Cerca in rete" aprono il browser del dispositivo con il codice o il testo scansionato, <strong>solo se l'utente li tocca</strong>. L'App non invia nulla in automatico a questi siti: da quel momento il trattamento è regolato dall'informativa sulla privacy del sito aperto.</p>
+            <p><strong>Documenti PDF da codice QR:</strong> quando un codice QR contiene un indirizzo web protetto (https) che punta a un documento PDF, l'App mostra il pulsante "Salva il PDF nei miei scontrini". <strong>Solo se l'utente lo tocca</strong>, l'App scarica il documento direttamente dal sito indicato nel codice e lo salva sul dispositivo. A quel sito arrivano soltanto l'indirizzo del documento richiesto e i dati tecnici inevitabili di qualunque connessione internet (indirizzo IP del dispositivo), come avverrebbe aprendo lo stesso indirizzo nel browser: l'App non vi aggiunge alcun altro dato. Il sito è quello scelto da chi ha creato il codice QR, può avere sede anche fuori dall'Unione europea e tratta questi dati secondo la propria informativa sulla privacy. Senza il tocco dell'utente l'App non contatta il sito.</p>
             <p><strong>Destinatario:</strong></p>
             <ul>
                 <li><strong>Open Food Facts</strong>, associazione senza scopo di lucro con sede in Francia, che gestisce Open Food Facts, Open Beauty Facts, Open Pet Food Facts, Open Products Facts e Open Prices e tratta i dati secondo la propria <a href="https://world.openfoodfacts.org/privacy" target="_blank" rel="noopener">informativa sulla privacy</a>.</li>
@@ -170,7 +172,7 @@
         <section>
             <h2>6. Sicurezza e Conservazione</h2>
             <p>I dati salvati sul dispositivo sono protetti dall'isolamento applicativo (<em>sandbox</em>) previsto dal sistema operativo Android, che ne impedisce la lettura da parte di altre applicazioni. Se l'utente ha attivato la cifratura del dispositivo, essa si applica anche a questi dati.</p>
-            <p>Le comunicazioni verso Google Drive, Firebase, Open Food Facts (e le banche dati collegate) e Open Prices avvengono tramite connessione cifrata HTTPS/TLS.</p>
+            <p>Le comunicazioni verso Google Drive, Firebase, Open Food Facts (e le banche dati collegate) e Open Prices avvengono tramite connessione cifrata HTTPS/TLS. Anche i documenti PDF indicati da un codice QR vengono scaricati soltanto tramite connessione cifrata HTTPS.</p>
             <p><strong>Si informa espressamente che il file di backup caricato su Google Drive non è protetto da una cifratura aggiuntiva applicata dall'App</strong>, ed è tutelato dalle misure di sicurezza e dal controllo di accesso dell'account Google dell'utente.</p>
             <p><strong>Conservazione:</strong> i dati locali permangono fino alla loro cancellazione da parte dell'utente o alla disinstallazione dell'App. Il file di backup permane nel Drive dell'utente fino a sua eliminazione manuale. I dati di Crashlytics sono conservati da Google secondo le tempistiche previste dal servizio, di norma 90 giorni.</p>
         </section>
